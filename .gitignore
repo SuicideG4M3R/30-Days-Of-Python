@@ -19,3 +19,6 @@ numpy.ipynb
 .vscode/
 *~
 test.py
+
+ .devcontainer/
+.github/dependabot.yml
