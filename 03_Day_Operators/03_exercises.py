@@ -50,22 +50,68 @@ user_radius = float(input("Enter radius of a circle: "))
 print(f"Area = {3.14 * user_radius * user_radius}\nCircumference = {2 * 3.14 * user_radius}")
 
 # Calculate the slope, x-intercept and y-intercept of y = 2x -2
-
-
-
 # Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 # Compare the slopes in tasks 8 and 9.
 
+function_slope = 2
+function_x_intercept = 2 / function_slope
+function_y_intercept = -2
 
+x1, y1 = 2, 2
+x2, y2 = 6, 10
+points_slope = (y2 - y1) / (x2 - x1)
+euclidean_distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
 
+print(f"Slope of y = 2x - 2: {function_slope}")
+print(f"x-intercept: ({function_x_intercept}, 0)")
+print(f"y-intercept: (0, {function_y_intercept})")
+print(f"Slope between the points: {points_slope}")
+print(f"Euclidean distance: {euclidean_distance}")
+print(f"Slopes are equal: {function_slope == points_slope}")
 
 # Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+
+for x in range(-10,10):
+	y = x ** 2 + 6 * x + 9
+	if y == 0:
+		print(f"y = 0, when x = {x}")
+		break
+
 # Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+
+print(f'{len("python") != len("dragon")}')
+
 # Use and operator to check if 'on' is found in both 'python' and 'dragon'
+
+print("on" in "python" and "on" in "dragon")
+
 # I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+
+sentence = "I hope this course is not full of jargon"
+
+print("jargon" in sentence)
+
 # There is no 'on' in both dragon and python
+
+print("on" not in "python" and "on" not in "dragon")
+
 # Find the length of the text python and convert the value to float and convert it to string
+
+sentence = "python"
+print(type(str(float(len(sentence)))))
+
 # Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+
+numbers = range(0, 101)
+even_numbers = []
+
+
+for number in numbers:
+	if number % 2 == 0:
+		even_numbers.append(number)
+print(even_numbers)
+
+
 # Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
 # Check if type of '10' is equal to type of 10
 # Check if int('9.8') is equal to 10
